@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  allbins:
+    container_name: allbins
+    image: opscode/allbins:ubuntu
+    build: ./
+    command: /bin/bash
+    stdin_open: true
+    tty: true
+    volumes:
+      - ~/:/home/ubuntu/
